@@ -1,7 +1,17 @@
 def position_taken?(board, index)
-  if board[index] == (" " || "" || nil) || (index < 1 || index > 9)
+  square = board[index]
+#
+  if square == " "
     false
-  elsif board[index] == ("X" || "O")
+  elsif square == ""
+    false
+  elsif square == nil
+    false
+  elsif square == "X"
+    true
+  elsif square == "O"
     true
   end
 end
+
+# board = ["X", " ", " ", " ", " ", " ", " ", " ", "O"]
